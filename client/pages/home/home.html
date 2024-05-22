@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Examen JS - Posts</title>
+
+    <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    
+    <script type="module" src="./home.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js" defer></script>
+</head>
+
+<body>
+    <main class="container">
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <span class="logo">Posts</span>
+            <div class="logout">
+                <div class="user-card">
+                    <img src="https://picsum.photos/50/50" alt="Foto de perfil del usuario" class="user-image">
+                    <span class="user-name">Name</span>
+                    <span class="user-username">@username</span>
+                </div>
+                <span class="logout-icon material-symbols-outlined">
+                    logout
+                </span>
+            </div>
+        </nav>
+        <!-- CONTROLS -->
+        <div class="show-more">
+            <span>Show more</span>
+            <span class="show-more-icon material-symbols-outlined">expand_more</span>
+        </div>
+        <button class="add-post">
+            <span class="material-symbols-outlined">add</span>
+        </button>
+        <div class="my-friends">
+            <span class="my-friends-icon show-more-icon material-symbols-outlined">diversity_2</span>
+            <span>Friends</span>
+        </div>
+        <!-- POST GALLERY -->
+        <article class="post-wrapper" data-posts="0"></article>
+        <!-- CREATE POST MODAL -->
+        <div class="create-post-wrapper">
+            <form name="create-post" class="create-post-form">
+                <span class="new-post-label">NEW POST</span>
+                <input name="title" class="post-title" type="text" placeholder="Post title">
+                <textarea name="content" class="post-content" placeholder="Write your post..."></textarea>
+                <div class="submit-wrapper">
+                    <button name="submit" class="submit-btn">
+                        <span class="material-symbols-outlined">send</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+.create-group-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    height: 100vh;
+    width: 100vw;
+
+    display: none;
+    place-content: center;
+
+    background-color: rgba(0,0,0,0.2);
+    backdrop-filter: blur(5px);
+}
+
+.new-group-label {
+    padding-right: 1em;
+    align-self: flex-end;
+    font-weight: bold;
+}
+
+.create-group-form {
+    padding: 2em;
+    box-sizing: border-box;
+
+    min-height: 600px;
+    min-width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.create-group-form input {
+    appearance: none;
+
+    padding: 0.5em;
+    padding-inline: 1.2em;
+
+    border: 1px solid lightgray;
+    border-radius: 2pt;
+
+    outline: none
+}
+
+.group-content {
+    padding: 1em;
+
+    min-height: 150px;
+    max-height: 200px;
+
+    border: 1px solid lightgray;
+    border-radius: 5pt;
+    
+    resize: none;
+
+    box-shadow: 5px 5px 10px -5px rgba(0,0,0,0.2);
+
+    overflow-y: scroll;
+}
+
+.create-group-form .submit-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-group-form .submit-wrapper .submit-btn {
+    height: 50px;
+    width: 50px;
+    border-radius: 100pt;
+    box-shadow: 5px 5px 10px -5px rgba(0,0,0,0.2);
+}

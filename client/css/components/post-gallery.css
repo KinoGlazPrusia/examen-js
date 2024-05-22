@@ -1,0 +1,219 @@
+/* WRAPPER */
+.post-wrapper {
+    padding: 2em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+
+    overflow-y: scroll;
+}
+
+/* CONTROLS - SHOW MORE */
+.show-more {
+    cursor: pointer;
+
+    padding: 0.5em;
+    padding-inline: 1em;
+
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 100pt;
+
+    transition: 300ms;
+
+    z-index: 100;
+}
+
+.show-more:hover {
+    background-color: lightgray;
+}
+
+.show-more-icon {
+    margin-top: 0.15em;
+    box-sizing: border-box;
+}
+
+/* CONTROLS - ADD POST */
+.add-post {
+    appearance: none;
+    cursor: pointer;
+
+    position: absolute;
+    top: 7em;
+    left: 2em;
+
+    height: 50px;
+    width: 50px;
+
+    border: none;
+    border-radius: 100pt;
+
+    display: grid;
+    place-content: center;
+
+    transition: 300ms;
+}
+
+.add-post:hover {
+    background-color: lightgray;
+}
+
+/* POST */
+.post-card {
+    padding: 2em;
+    max-width: 50%;
+    min-height: 600px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    border: 1px solid lightgray;
+    border-radius: 10pt;
+
+    box-shadow: 5px 5px 10px -5px rgba(0,0,0,0.2);
+}
+
+/* POST - DATE */
+.post-date {
+    align-self: flex-end;
+
+    color: gray;
+    font-size: 0.75em;
+}
+
+/* POST - HEADER */
+.post-header {
+    flex: 1;
+    padding: 0.5em;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-content: start;
+}
+
+.post-user-image {
+    margin-right: 0.5em;
+
+    max-height: 40px;
+    max-width: 40px;
+
+    border-radius: 100pt;
+
+    grid-row-start: span 2;
+    align-self: center;
+}
+
+.post-user-name {
+    align-self: flex-end;
+    font-weight: bold;
+}
+
+.post-user-email {
+    font-size: 0.8em;
+}
+
+/* POST - BODY */
+.post-body {
+    flex: 6;
+}
+
+.post-title {
+    font-weight: bold;
+}
+
+.post-content {
+    max-height: 350px;
+
+    font-size: 0.9em;
+    overflow-y: scroll;
+}
+
+/* POST - ACTIONS */
+.post-actions {
+    flex: 1;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    color: rgb(54, 54, 54);
+    font-size: 0.9em;
+}
+
+.comment-icon, .like-icon, .share-icon, .bookmark-icon {
+    cursor: pointer;
+    transition: 300ms;
+
+    position: relative;
+}
+
+.comment-icon::before, .like-icon::before, .share-icon::before, .bookmark-icon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+
+    border-radius: 100pt;
+    filter: blur(10px);
+
+    z-index: -1;
+
+    transition: 300ms;
+}
+
+.comment-icon:hover {
+    color: rgb(13, 78, 218);
+}
+
+.comment-icon:hover::before {
+    background-color: rgba(13, 78, 218, 0.5);
+}
+
+.like-icon:hover {
+    color: red;
+}
+
+.like-icon:hover::before {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.bookmark-icon:hover {
+    color: orange;
+}
+
+.bookmark-icon:hover::before {
+    background-color: rgba(255, 165, 0, 0.5);
+}
+
+.share-icon:hover {
+    color: green;
+}
+
+.share-icon:hover::before {
+    background-color: rgba(0, 128, 0, 0.5);
+}
+
+.comments, .likes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.5em;
+}
+

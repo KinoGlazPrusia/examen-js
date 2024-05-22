@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Examen JS - Login</title>
+
+    <link rel="stylesheet" href="client/css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap">
+
+    <script type="module" src="client/js/index.js" defer></script>
+</head>
+
+<body>
+    <main class="container">
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <span class="logo">Examen PHP</span>
+        </nav>
+        <!-- LOGIN FORM -->
+        <article class="login-wrapper">
+            <form name="login-form" class="login-form">
+                <span class="login-label">LOGIN</span>
+                <input name="userId" type="email">
+                <input name="password" type="password">
+                <span class="register">You can sign up <code>here</code></span>
+                <div class="submit-wrapper">
+                    <div class="remember-me-wrapper">
+                        <input name="remember-me" id="remember-me" type="checkbox">
+                        <label for="remember-me">Remember me</label>
+                    </div>
+                    <button name="submit" class="submit-btn">Login</button>
+                </div>
+                <span class="response"></span>
+            </form>
+        </article>
+        <!-- REGISTER FORM MODAL -->
+        <article class="register-modal">
+            <form name="register-form" class="register-form">
+                <span class="register-label">REGISTER</span>
+                <input name="fname" type="text" placeholder="Name">
+                <input name="lname" type="text" placeholder="Last Name">
+                <input name="birthday" type="date" placeholder="Birthday">
+                <input name="email" type="email" placeholder="Email">
+                <input name="password" type="password" placeholder="Password">
+                <input name="conf-password" type="password" placeholder="Confirm password">
+                <div class="submit-wrapper">
+                    <button name="submit" class="submit-btn">Register</button>
+                </div>
+                <span class="response" id="register"></span>
+            </form>
+        </article>
+        <!-- FOOTER -->
+        <article class="footer">
+            <span class="copyright">2024</span>
+            <span class="copyright">&copy;MIT License</span>
+        </article>
+    </main>
+</body>
+
+</html>

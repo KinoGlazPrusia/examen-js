@@ -1,0 +1,188 @@
+/* GROUP GALLERY */
+.group-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+
+    perspective: 800px;
+}
+
+/* GROUP CARD */
+.group-card {
+    position: relative;
+
+    padding: 2em;
+    box-sizing: border-box;
+
+    max-width: 375px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+
+    border:1px solid lightgray;
+    border-radius: 5pt;
+
+    box-shadow: 5px 5px 10px -5px rgba(0,0,0,0.2);
+
+    transition: 300ms;
+
+    background-color: rgb(236, 236, 236);
+}
+
+.group-card:hover {
+    transform: scale(1.02);
+    background-color: rgb(210, 227, 233);
+}
+
+/* GROUP CARD - NAME */
+.group-name {
+    font-weight: bold;
+}
+
+/* GROUP CARD - IMAGE */
+.group-image {
+    height: 300px;
+    width: 300px;
+    border-radius: 5pt;
+}
+
+/* GROUP CARD - DESCRIPTION */
+.group-description {
+    position: relative;
+
+    width: 100%;
+
+    font-size: 0.8em;
+
+    min-height: 50px;
+    max-height: 50px;
+
+    overflow: hidden;
+
+    transition: 300ms;
+}
+
+.extended {
+    max-height: fit-content;
+    padding-bottom: 20px;
+}
+
+.group-description.long::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 20px;
+
+    background: linear-gradient(to top, rgba(236, 236, 236, 1), rgba(236, 236, 236, 0));
+}
+
+.group-card:hover .group-description.long::after {
+    background: linear-gradient(to top, rgba(210, 227, 233, 1), rgba(210, 227, 233, 0));
+}
+
+.group-description-extend {
+    cursor: pointer;
+    border: none;
+
+    background-color: transparent;
+
+    transition: 300ms;
+}
+
+.group-description-extend:hover {
+    color: rgb(255, 174, 0);
+}
+
+.group-description-extend span {
+    font-size: 2em;
+}
+
+
+/* GROUP CARD - TAGS */
+.group-tag-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+.group-tag {
+    padding-inline: 0.5em;
+    border-radius: 2pt;
+
+    background-color: rgb(204, 204, 204);
+}
+
+/* CONTROLS */
+.add-group {
+    appearance: none;
+    cursor: pointer;
+
+    position: absolute;
+    top: 7em;
+    left: 2em;
+
+    height: 50px;
+    width: 50px;
+
+    border: none;
+    border-radius: 100pt;
+
+    display: grid;
+    place-content: center;
+
+    transition: 300ms;
+}
+
+.add-group:hover {
+    background-color: lightgray;
+}
+
+.follow {
+    position: absolute;
+    bottom: 0.8em;
+    right: 0.8em;
+
+    z-index: 100;
+
+    cursor: pointer;
+    border: none;
+
+    background-color: transparent;
+
+    transition: 300ms;
+}
+
+.follow:hover {
+    color: rgb(14, 167, 14);
+}
+
+.go-back#go-back-group {
+    appearance: none;
+    cursor: pointer;
+
+    position: absolute;
+    top: 12em;
+    left: 2em;
+
+    height: 50px;
+    width: 50px;
+
+    border: none;
+    border-radius: 100pt;
+
+    display: grid;
+    place-content: center;
+
+    transition: 300ms;
+}

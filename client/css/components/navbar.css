@@ -1,0 +1,77 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    background-color: lightgrey;
+
+    box-shadow: 5px 5px 10px -5px rgba(0,0,0,0.2);
+}
+
+.logo {
+    padding: 0.5em;
+    padding-left: 1em;
+    box-sizing: border-box;
+
+    font-size: 1.8em;
+    font-weight: bold;
+    font-family: "Poetsen One", sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.logout-icon {
+    padding: 0.5em;
+    box-sizing: border-box;
+
+    cursor: pointer;
+
+    transition: 300ms;
+}
+
+.logout-icon:hover {
+    color: white;
+}
+
+.user-card {
+    padding: 0.5em;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+
+.user-image {
+    margin-right: 0.5em;
+
+    max-height: 30px;
+    max-width: 30px;
+
+    border-radius: 100pt;
+
+    grid-row-start: span 2;
+    align-self: center;
+}
+
+.user-name {
+    font-size: 0.9em;
+    font-weight: bold;
+
+    align-self: flex-end;
+}
+
+.user-username {
+    color: darkslategray;
+    font-size: 0.75em;
+
+    align-self: flex-start;
+}

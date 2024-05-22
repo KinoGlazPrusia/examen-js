@@ -1,0 +1,94 @@
+.login-wrapper {
+    height: 100%;
+
+    display: grid;
+    place-content: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.login-label {
+    padding-left: 1em;
+
+    align-self: flex-start;
+
+    font-weight: bold;
+}
+
+.login-form input:not(#remember-me) {
+    appearance: none;
+
+    padding: 0.5em;
+    padding-inline: 1.2em;
+
+    border: 1px solid lightgray;
+    border-radius: 5pt;
+}
+
+.login-form input {
+    outline: none;
+}
+
+.register {
+    color: gray;
+    font-size: 0.75em;
+}
+
+.register code {
+    cursor: pointer;
+
+    color: blue;
+    text-decoration: underline;
+}
+
+.register code:hover {
+    color: darkblue;
+}
+
+.submit-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.submit-btn {
+    cursor: pointer;
+
+    padding: 0.5em;
+    padding-inline: 1.5em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+    border-radius: 5pt;
+
+    transition: 300ms;
+}
+
+.submit-btn:hover {
+    color: white;
+    background-color: grey;
+}
+
+.remember-me-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-size: 0.8em;
+}
+
+.response {
+    font-size: 0.75em;
+    color: red
+}
